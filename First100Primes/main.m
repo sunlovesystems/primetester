@@ -18,25 +18,27 @@ int main(int argc, const char * argv[])
         // We moved the creation of the primes array into a PrimeBox object
         // that is basically like a factory, which creates primes. Then we
         // use the PrimeBox's createPrimes method/function to create the array.
+        // This works well for testing if a number is among the first 100 primes.
         
-        // Also can make a PrimeTester to test if any number is prime...
+        // We also can make a PrimeTester to test if any number is prime...
         
-        // Do this if I don't use primetester -- otherwise, use primetester
+        // Do this part if testing first 100 primes -- otherwise, use primetester
         // PrimeBox *primebox = [[PrimeBox alloc] init];
         // NSArray *myPrimes = [primebox createPrimes];
         
         PrimeTester *primetester = [[PrimeTester alloc] init];
         
         int num;
+        primetester.score = 0;
+        
         while (true) {
             NSLog(@"Please enter a number: ");
             scanf("%d",&num);
             NSLog(@"You have entered %d", num);
             
-            // One way to do this is use primetester for any number
             [primetester isPrime:num];
             
-            // Another way is to check to see if the number is in the first 100 primes
+            // If doing first 100 primes, check to see if the number is in the first 100 primes
 //            for (NSNumber *number in myPrimes) {
 //                if ([number intValue] == num) {
 //                    NSLog(@"%d is one of the first 100 primes!", num);

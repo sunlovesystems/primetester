@@ -10,6 +10,8 @@
 
 @interface PrimeTester : NSObject
 
+@property (nonatomic) int score;
+
 -(BOOL)isPrime:(int)number;
 
 @end
