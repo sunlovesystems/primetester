@@ -10,6 +10,8 @@
 		F87CBE36190BD8D2003A54D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87CBE35190BD8D2003A54D4 /* Foundation.framework */; };
 		F87CBE39190BD8D2003A54D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F87CBE38190BD8D2003A54D4 /* main.m */; };
 		F87CBE3D190BD8D2003A54D4 /* First100Primes.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F87CBE3C190BD8D2003A54D4 /* First100Primes.1 */; };
+		F8A91070191D71CF00479A18 /* PrimeBox.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A9106F191D71CF00479A18 /* PrimeBox.m */; };
+		F8A91073191D769A00479A18 /* PrimeTester.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A91072191D769A00479A18 /* PrimeTester.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		F87CBE38190BD8D2003A54D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F87CBE3B190BD8D2003A54D4 /* First100Primes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First100Primes-Prefix.pch"; sourceTree = "<group>"; };
 		F87CBE3C190BD8D2003A54D4 /* First100Primes.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = First100Primes.1; sourceTree = "<group>"; };
+		F8A9106E191D71CF00479A18 /* PrimeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeBox.h; sourceTree = "<group>"; };
+		F8A9106F191D71CF00479A18 /* PrimeBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeBox.m; sourceTree = "<group>"; };
+		F8A91071191D769A00479A18 /* PrimeTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeTester.h; sourceTree = "<group>"; };
+		F8A91072191D769A00479A18 /* PrimeTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeTester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				F87CBE38190BD8D2003A54D4 /* main.m */,
+				F8A9106E191D71CF00479A18 /* PrimeBox.h */,
+				F8A9106F191D71CF00479A18 /* PrimeBox.m */,
+				F8A91071191D769A00479A18 /* PrimeTester.h */,
+				F8A91072191D769A00479A18 /* PrimeTester.m */,
 				F87CBE3C190BD8D2003A54D4 /* First100Primes.1 */,
 				F87CBE3A190BD8D2003A54D4 /* Supporting Files */,
 			);
@@ -139,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A91073191D769A00479A18 /* PrimeTester.m in Sources */,
 				F87CBE39190BD8D2003A54D4 /* main.m in Sources */,
+				F8A91070191D71CF00479A18 /* PrimeBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +265,7 @@
 				F87CBE42190BD8D2003A54D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
