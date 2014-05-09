@@ -11,6 +11,7 @@
 @interface PrimeBox : NSObject
 
 @property (nonatomic, strong) NSMutableArray *primes;
+@property (nonatomic) int score;
 
 -(NSMutableArray *)createPrimes;
 -(BOOL)isPrime:(int)num;

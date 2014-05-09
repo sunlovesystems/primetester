@@ -22,32 +22,25 @@ int main(int argc, const char * argv[])
         
         // We also can make a PrimeTester to test if any number is prime...
         
-        // Do this part if testing first 100 primes -- otherwise, use primetester
-        // PrimeBox *primebox = [[PrimeBox alloc] init];
-        // NSArray *myPrimes = [primebox createPrimes];
+        // Use PrimeBox if testing first 100 primes -- otherwise, use PrimeTester
+        PrimeBox *primebox = [[PrimeBox alloc] init];
         
-        PrimeTester *primetester = [[PrimeTester alloc] init];
+        // PrimeTester *primetester = [[PrimeTester alloc] init];
         
         int num;
-        primetester.score = 0;
+        // primetester.score = 0;
+        primebox.score = 0;
         
         while (true) {
             NSLog(@"Please enter a number: ");
             scanf("%d",&num);
             NSLog(@"You have entered %d", num);
             
-            [primetester isPrime:num];
+            // If checking any number, use PrimeTester
+            // [primetester isPrime:num];
             
-            // If doing first 100 primes, check to see if the number is in the first 100 primes
-//            for (NSNumber *number in myPrimes) {
-//                if ([number intValue] == num) {
-//                    NSLog(@"%d is one of the first 100 primes!", num);
-//                    break;
-//                }
-//                if (([number intValue] == 541) && ([number intValue] != num)) {
-//                NSLog(@"%d is not one of the first 100 primes. Try again...");
-//                }
-//            }
+            // If checking if a number is in the first 100 primes, use PrimeBox
+            [primebox isPrime:num];
 
         }
         

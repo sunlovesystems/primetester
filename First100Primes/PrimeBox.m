@@ -10,13 +10,20 @@
 
 @implementation PrimeBox
 
+-(id)init
+{
+    self = [super init];
+    _primes = [self createPrimes];
+    return self;
+}
+
 -(NSMutableArray *)createPrimes
 {
     NSMutableArray *primes = [[NSMutableArray alloc] init];
     
     // First let's take care of 2, which doesn't obey the usual prime rules
     [primes addObject:[NSNumber numberWithInt:2]];
-    NSLog(@"2 is prime");
+    // NSLog(@"2 is prime");
     
     // Start at 3, the first prime that obeys usual rules
     int i = 3;
@@ -29,7 +36,7 @@
             if (i % d == 0) {
                 break;
             } else if (d == i - 1 && i % d != 0) {
-                NSLog(@"%d is prime", i);
+                // NSLog(@"%d is prime", i);
                 [primes addObject:[NSNumber numberWithInt:i]];
                 p++;
             }
@@ -41,7 +48,19 @@
 
 -(BOOL)isPrime:(int)num
 {
-    // return false to make an empty non-void method work
+    for (NSNumber *number in _primes) {
+        if ([number intValue] == num) {
+            NSLog(@"%d is one of the first 100 primes!", num);
+            _score++;
+            NSLog(@"Your score is %d!", _score);
+            return true;
+        } else if (([_primes lastObject] == number) && ([number intValue] != num)) {
+            NSLog(@"%d is not one of the first 100 primes. Try again...", num);
+            _score--;
+            NSLog(@"Your score is %d!", _score);
+            return false;
+        }
+    }
     return false;
 }
 
